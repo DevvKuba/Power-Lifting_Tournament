@@ -35,11 +35,36 @@ lifter_19 = PowerLifter( "NYU", 90, 180, 130, 215, "Simon")
 lifter_20 = PowerLifter( "NYU", 86, 150, 105, 220, "Tony")
 
 
+# assigning athletes to School's lifting team
+university_1.assign_to_lifting_team(lifter_1.lifter_info_dict())
+university_1.assign_to_lifting_team(lifter_2.lifter_info_dict())
+university_1.assign_to_lifting_team(lifter_3.lifter_info_dict())
+university_1.assign_to_lifting_team(lifter_4.lifter_info_dict())
+university_1.assign_to_lifting_team(lifter_5.lifter_info_dict())
 
-university_1.assign_to_correct_school(lifter_1.lifter_info_dict())
-university_1.assign_to_correct_school(lifter_2.lifter_info_dict())
-university_1.assign_to_correct_school(lifter_3.lifter_info_dict())
+university_2.assign_to_lifting_team(lifter_6.lifter_info_dict())
+university_2.assign_to_lifting_team(lifter_7.lifter_info_dict())
+university_2.assign_to_lifting_team(lifter_8.lifter_info_dict())
+university_2.assign_to_lifting_team(lifter_9.lifter_info_dict())
+university_2.assign_to_lifting_team(lifter_10.lifter_info_dict())
+
+university_3.assign_to_lifting_team(lifter_11.lifter_info_dict())
+university_3.assign_to_lifting_team(lifter_12.lifter_info_dict())
+university_3.assign_to_lifting_team(lifter_13.lifter_info_dict())
+university_3.assign_to_lifting_team(lifter_14.lifter_info_dict())
+university_3.assign_to_lifting_team(lifter_15.lifter_info_dict())
+
+university_4.assign_to_lifting_team(lifter_16.lifter_info_dict())
+university_4.assign_to_lifting_team(lifter_17.lifter_info_dict())
+university_4.assign_to_lifting_team(lifter_18.lifter_info_dict())
+university_4.assign_to_lifting_team(lifter_19.lifter_info_dict())
+university_4.assign_to_lifting_team(lifter_20.lifter_info_dict())
+
+
 print(university_1.display_lifters())
-print(university_1.display_top_lifter())
+university_1.create_comp_team()
+print(university_1.team_total())
+
+
 
 
