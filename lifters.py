@@ -38,7 +38,6 @@ class PowerLifter:
             "Weight Class": self.calc_weight_class(),
             "Total": self.calc_total(),
         }
-
         return self.info
 
 
@@ -47,9 +46,12 @@ class School:
         self.school_name = school_name
         self.region = region
         self.ranking = None # can only be calculated after one tournament, changes with concurring tournaments
+        self.school_team = None
+        self.team_obj = None
         self.lifters_list = []
 
-    def assign_to_correct_school(self, lifter_info):
+
+    def assign_to_lifting_team(self, lifter_info):
         if lifter_info["School"] == self.school_name:
             self.lifters_list.append(lifter_info)
 
@@ -65,9 +67,45 @@ class School:
             pos += 1
         return self.lifters_list[max(strength_dict)]
 
+    def create_comp_team(self):
+        self.team_obj = Team(self.lifters_list)
+        self.school_team = self.team_obj.assemble_team()
+        return self.school_team
+
+    def team_total(self):
+        return f"{self.team_obj.combined_total()}kg"
+
 
 
 class Team:
-    pass
+
+     def __init__(self, lifters_dicts):
+         self.team = []
+         self.team_total = 0
+         self.lifters_dict = lifters_dicts
+
+     def assemble_team(self):
+         light_slot = 0
+         medium_slot = 0
+         heavy_slot = 0
+         for lifter in self.lifters_dict:
+            if lifter["Weight Class"] == "Medium Weight" and medium_slot == 0:
+                self.team.append(lifter)
+                medium_slot += 1
+            elif lifter["Weight Class"] == "Heavy Weight" and heavy_slot == 0:
+                self.team.append(lifter)
+                heavy_slot += 1
+            elif lifter["Weight Class"] == "Light Weight" and light_slot == 0:
+                self.team.append(lifter)
+                light_slot += 1
+         return self.team
+
+
+     def combined_total(self):
+         for lifter in self.team:
+             self.team_total += lifter["Total"]
+         return self.team_total
+
+
 
 
