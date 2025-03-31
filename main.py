@@ -1,4 +1,5 @@
 from lifters import *
+from competitions import *
 
 #Creating all our possible universities
 university_1 = School("Loughborough", "East Midlands")
@@ -61,9 +62,10 @@ university_4.assign_to_lifting_team(lifter_19.lifter_info_dict())
 university_4.assign_to_lifting_team(lifter_20.lifter_info_dict())
 
 
-print(university_1.display_lifters())
-university_1.create_comp_team()
-print(university_1.team_total())
+practice_match = Match(university_1.create_comp_team(), university_2.create_comp_team())
+print(practice_match.display_match_contenders())
+
+
 
 
 

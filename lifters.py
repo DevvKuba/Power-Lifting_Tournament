@@ -5,9 +5,9 @@ class PowerLifter:
     def __init__(self, school_name, weight, squat, bench, deadlift, first_name):
         self.school_name = school_name
         self.weight = int(weight)
-        self.squat = squat
-        self.bench = bench
-        self.deadlift = deadlift
+        self.squat = int(squat)
+        self.bench = int(bench)
+        self.deadlift = int(deadlift)
         self.first_name = first_name
         self.weight_class = self.calc_weight_class()
         self.total = self.calc_total()
