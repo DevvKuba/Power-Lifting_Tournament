@@ -17,7 +17,8 @@ class Match:
     def display_match_contenders(self):
         return self.contender_1, self.contender_2
 
-
+    def begin_match(self):
+        pass
 
         # at random choose a lifter from each team,
         # the weight class is random out of the three, but needs to be the same for both lifters

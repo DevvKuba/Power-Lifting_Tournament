@@ -37,33 +37,36 @@ lifter_20 = PowerLifter( "NYU", 86, 150, 105, 220, "Tony")
 
 
 # assigning athletes to School's lifting team
-university_1.assign_to_lifting_team(lifter_1.lifter_info_dict())
-university_1.assign_to_lifting_team(lifter_2.lifter_info_dict())
-university_1.assign_to_lifting_team(lifter_3.lifter_info_dict())
-university_1.assign_to_lifting_team(lifter_4.lifter_info_dict())
-university_1.assign_to_lifting_team(lifter_5.lifter_info_dict())
+university_1.assign_to_lifting_team(lifter_1)
+university_1.assign_to_lifting_team(lifter_2)
+university_1.assign_to_lifting_team(lifter_3)
+university_1.assign_to_lifting_team(lifter_4)
+university_1.assign_to_lifting_team(lifter_5)
 
-university_2.assign_to_lifting_team(lifter_6.lifter_info_dict())
-university_2.assign_to_lifting_team(lifter_7.lifter_info_dict())
-university_2.assign_to_lifting_team(lifter_8.lifter_info_dict())
-university_2.assign_to_lifting_team(lifter_9.lifter_info_dict())
-university_2.assign_to_lifting_team(lifter_10.lifter_info_dict())
+university_2.assign_to_lifting_team(lifter_6)
+university_2.assign_to_lifting_team(lifter_7)
+university_2.assign_to_lifting_team(lifter_8)
+university_2.assign_to_lifting_team(lifter_9)
+university_2.assign_to_lifting_team(lifter_10)
 
-university_3.assign_to_lifting_team(lifter_11.lifter_info_dict())
-university_3.assign_to_lifting_team(lifter_12.lifter_info_dict())
-university_3.assign_to_lifting_team(lifter_13.lifter_info_dict())
-university_3.assign_to_lifting_team(lifter_14.lifter_info_dict())
-university_3.assign_to_lifting_team(lifter_15.lifter_info_dict())
+university_3.assign_to_lifting_team(lifter_11)
+university_3.assign_to_lifting_team(lifter_12)
+university_3.assign_to_lifting_team(lifter_13)
+university_3.assign_to_lifting_team(lifter_14)
+university_3.assign_to_lifting_team(lifter_15)
 
-university_4.assign_to_lifting_team(lifter_16.lifter_info_dict())
-university_4.assign_to_lifting_team(lifter_17.lifter_info_dict())
-university_4.assign_to_lifting_team(lifter_18.lifter_info_dict())
-university_4.assign_to_lifting_team(lifter_19.lifter_info_dict())
-university_4.assign_to_lifting_team(lifter_20.lifter_info_dict())
+university_4.assign_to_lifting_team(lifter_16)
+university_4.assign_to_lifting_team(lifter_17)
+university_4.assign_to_lifting_team(lifter_18)
+university_4.assign_to_lifting_team(lifter_19)
+university_4.assign_to_lifting_team(lifter_20)
 
 
-practice_match = Match(university_1.create_comp_team(), university_2.create_comp_team())
-print(practice_match.display_match_contenders())
+# need to use parenthesis to call bound method object
+print(university_1.display_lifters())
+
+# practice_match = Match(university_1.create_comp_team(), university_2.create_comp_team())
+# print(practice_match.display_match_contenders())
 
 
 

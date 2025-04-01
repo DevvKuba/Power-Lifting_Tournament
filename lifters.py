@@ -51,12 +51,14 @@ class School:
         self.lifters_list = []
 
 
-    def assign_to_lifting_team(self, lifter_info):
-        if lifter_info["School"] == self.school_name:
-            self.lifters_list.append(lifter_info)
+    def assign_to_lifting_team(self, lifter):
+        if lifter.school_name == self.school_name:
+            self.lifters_list.append(lifter.info)
+
 
     def display_lifters(self):
         return self.lifters_list
+
 
     def display_top_lifter(self):
         pos = 0
