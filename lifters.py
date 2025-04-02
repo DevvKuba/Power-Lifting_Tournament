@@ -36,6 +36,9 @@ class PowerLifter:
             "School": self.school_name,
             "Weight": self.weight,
             "Weight Class": self.calc_weight_class(),
+            "Bench": self.bench,
+            "Squat": self.squat,
+            "Deadlift": self.deadlift,
             "Total": self.calc_total(),
         }
         return self.info
@@ -56,6 +59,7 @@ class School:
             self.lifters_list.append(lifter.info)
 
 
+    # need () to invoke as we passed in objects creating self.lifters_list
     def display_lifters(self):
         return self.lifters_list
 

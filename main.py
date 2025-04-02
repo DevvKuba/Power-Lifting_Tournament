@@ -63,9 +63,13 @@ university_4.assign_to_lifting_team(lifter_20)
 
 
 # need to use parenthesis to call bound method object
-print(university_1.display_lifters())
 
-# practice_match = Match(university_1.create_comp_team(), university_2.create_comp_team())
+university_1_team = university_1.create_comp_team()
+university_2_team = university_2.create_comp_team()
+practice_match = Match(university_1_team, university_2_team)
+print(practice_match.begin_match())
+
+
 # print(practice_match.display_match_contenders())
 
 
