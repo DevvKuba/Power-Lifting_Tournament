@@ -66,11 +66,17 @@ university_4.assign_to_lifting_team(lifter_20)
 
 university_1_team = university_1.create_comp_team()
 university_2_team = university_2.create_comp_team()
-practice_match = Match(university_1_team, university_2_team)
-print(practice_match.begin_match())
+practice_match_1 = Match(university_1_team, university_2_team)
+# print(practice_match_1.begin_match())
+
+university_3_team = university_3.create_comp_team()
+university_4_team = university_4.create_comp_team()
+
+international_tournament = Tournament(university_1_team, university_2_team, university_3_team, university_4_team)
+print(international_tournament.begin_tournament_matches())
 
 
-# print(practice_match.display_match_contenders())
+
 
 
 
